@@ -1,0 +1,49 @@
+/* Write your CSS here */
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+.bg {
+  border: 1px solid gray;
+  background-image: linear-gradient(to right, #fa7257, #fc63a7);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.heading {
+  color: white;
+  align-self: center;
+}
+.btnEl {
+  color: #dd1264;
+  background-color: #ffffff;
+  border-color: transparent;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.infoCard {
+  background-color: #fddddb;
+  padding: 24px 72px;
+  text-align: center;
+  margin-bottom: 8px;
+  border-radius: 1rem;
+}
+@media (max-width: 767px) {
+  .card {
+    flex-direction: column;
+  }
+}
