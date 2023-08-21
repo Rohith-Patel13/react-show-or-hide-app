@@ -1,30 +1,28 @@
-// Write your code here
-
 import './index.css'
-
 import {Component} from 'react'
 
 class ShowHide extends Component {
-  state = {isFirstNameClicked: 'false', isLastNameClicked: 'false'}
+  state = {
+    isFirstNameClicked: false,
+    isLastNameClicked: false,
+  }
 
   onClickedFirstName = () => {
     this.setState(prevState => ({
-      isFirstNameClicked:
-        prevState.isFirstNameClicked === 'false' ? 'true' : 'false',
+      isFirstNameClicked: !prevState.isFirstNameClicked, // Simplified this line
     }))
   }
 
   onClickedLastName = () => {
     this.setState(prevState => ({
-      isLastNameClicked:
-        prevState.isLastNameClicked === 'false' ? 'true' : 'false',
+      isLastNameClicked: !prevState.isLastNameClicked, // Simplified this line
     }))
   }
 
   renderFirstName = () => {
     const {isFirstNameClicked} = this.state
 
-    if (isFirstNameClicked === 'true') {
+    if (isFirstNameClicked) {
       return (
         <div className="infoCard">
           <p>Joe</p>
@@ -37,7 +35,7 @@ class ShowHide extends Component {
   renderLastName = () => {
     const {isLastNameClicked} = this.state
 
-    if (isLastNameClicked === 'true') {
+    if (isLastNameClicked) {
       return (
         <div className="infoCard">
           <p>Jonas</p>
